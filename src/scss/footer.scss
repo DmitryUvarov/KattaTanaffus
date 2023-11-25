@@ -1,3 +1,106 @@
 //====================================================================================================
 
+.footer {
+  background-color: #812d9f;
+  @include adaptiveValue("margin-top", 80, 35);
+  @include adaptiveValue("padding-top", 70, 35);
+  padding-bottom: toRem(25);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(25);
+    row-gap: toRem(30);
+    flex-wrap: wrap;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: toRem(20);
+    }
+  }
+
+  &__col {
+  }
+
+  &__title {
+    color: #fce302;
+    font-weight: 700;
+    @include adaptiveValue("margin-bottom", 19, 15);
+  }
+
+  &__list {
+    display: grid;
+    @include adaptiveValue("gap", 15, 10);
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: #fff;
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 700;
+    line-height: 130%; /* 23.4px */
+
+    display: flex;
+    align-items: center;
+    gap: toRem(5);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fce302;
+      }
+    }
+
+    &::before {
+      color: #fce302;
+      font-size: toRem(20);
+    }
+  }
+
+  &__social {
+  }
+
+  &__copy {
+    @include adaptiveValue("margin-top", 40, 25);
+    color: #fff;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 130%; /* 23.4px */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptiveValue("gap", 10, 5);
+
+    a {
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+        &:hover {
+          color: #fce302;
+        }
+      }
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: toRem(16);
+  &__link {
+    color: #fce302;
+    @include adaptiveValue("font-size", 50, 40);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
 //====================================================================================================
