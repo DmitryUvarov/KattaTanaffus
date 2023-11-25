@@ -2,13 +2,30 @@
 // Сніппет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&--fw {
-		width: 100%;
-	}
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px toRem(40);
+
+  background-color: #fce302;
+  border-radius: toRem(30);
+
+  @include adaptiveValue("height", 55, 48);
+
+  color: #812d9f;
+  font-family: "Cera Round Pro";
+  @include adaptiveValue("font-size", 24, 20);
+  font-weight: 500;
+  line-height: 103.333%; /* 103.333% */
+  transition: all 0.3s ease 0s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      color: rgba(48, 210, 255, 0.8);
+    }
+  }
+  &--fw {
+    width: 100%;
+  }
 }

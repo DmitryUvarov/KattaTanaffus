@@ -1,3 +1,148 @@
 //====================================================================================================
 
+.hero {
+  background-color: #812d9f;
+
+  @media (min-width: $tablet) {
+    margin-top: toRem(30);
+  }
+  @media (max-width: $tablet) {
+    margin-top: toRem(15);
+  }
+
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    column-gap: toRem(15);
+
+    padding-top: toRem(65);
+    @include adaptiveValue("padding-bottom", 65, 30);
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      row-gap: toRem(20);
+      min-height: calc(100svh - toRem(15) - var(--header-height));
+    }
+    @media (max-width: $mobile) {
+    }
+  }
+
+  &__content {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+    }
+  }
+
+  &__title {
+    max-width: toRem(575);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 30);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: toRem(20);
+    @include adaptiveValue("gap", 20, 10);
+
+    @media (max-width: $tablet) {
+      margin-top: auto;
+    }
+  }
+
+  &__button {
+    border-radius: toRem(20);
+    @media (max-width: $mobile) {
+      flex: 1 0 auto;
+    }
+  }
+
+  &__link {
+    &._icon-phone {
+      flex-shrink: 0;
+      background-color: #fce302;
+      color: #812d9f;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease 0s;
+
+      @media (min-width: $mobile) {
+        border-radius: 50%;
+        width: toRem(55);
+        height: toRem(55);
+      }
+      @media (max-width: $mobile) {
+        border-radius: toRem(20);
+        padding: 0 toRem(40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: toRem(10);
+        width: 100%;
+        @include adaptiveValue("height", 55, 48);
+      }
+
+      &::before {
+        @include adaptiveValue("font-size", 38, 24);
+      }
+
+      span {
+        color: #812d9f;
+        font-family: "Cera Round Pro";
+        @include adaptiveValue("font-size", 24, 20);
+        font-weight: 500;
+        line-height: 103.333%; /* 103.333% */
+        @media (min-width: $mobile) {
+          display: none;
+        }
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          color: rgba(48, 210, 255, 0.8);
+        }
+      }
+    }
+  }
+
+  &__image-ibg {
+    position: relative;
+    flex: 0 0 percent(600, 1200);
+
+    padding-bottom: percent(400, 1200);
+
+    @media (max-width: $tablet) {
+      padding-bottom: percent(220, 345);
+    }
+
+    img {
+      overflow: hidden;
+      border-radius: toRem(30);
+    }
+  }
+
+  &__star {
+    position: absolute;
+    top: toRem(-60);
+    right: toRem(-77);
+    z-index: 2;
+
+    @include adaptiveValue("right", -77, 15, 0, 1400, 1230);
+  }
+}
+
 //====================================================================================================
