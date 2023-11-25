@@ -205,3 +205,114 @@
   &__text {
   }
 }
+
+//========================================================================================================================================================
+
+.activities {
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 80, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__items {
+    display: grid;
+    gap: toRem(30);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+  }
+
+  &__item {
+  }
+}
+
+.image-activities {
+}
+.item-activities {
+  position: relative;
+  overflow: hidden;
+  border-radius: toRem(15);
+
+  border: toRem(1) solid #812d9f;
+  &__image-ibg {
+    display: block;
+    padding-bottom: percent(406, 380);
+  }
+  a.item-activities__image-ibg {
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: toRem(15);
+    background: #812d9f;
+    border: toRem(1) solid #812d9f;
+
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 30, 15);
+
+    padding: toRem(13) toRem(20) toRem(23);
+    min-height: toRem(190);
+
+    @media (max-width: $pc) {
+      padding: toRem(15);
+    }
+    @media (max-width: $mobile) {
+      min-height: toRem(150);
+    }
+  }
+
+  &__title {
+  }
+
+  &__link {
+    margin-top: auto;
+    width: fit-content;
+
+    @media (max-width: $pc) {
+      padding: 0 toRem(10);
+    }
+  }
+}
+
+.banner-activities {
+  border-radius: toRem(15);
+  background: #35c968;
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("gap", 37, 15);
+
+  padding: toRem(33) toRem(30) toRem(23);
+
+  @media (max-width: $mobile) {
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    text-align: center;
+  }
+  &__title {
+  }
+
+  &__button {
+    margin-top: auto;
+    width: fit-content;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
