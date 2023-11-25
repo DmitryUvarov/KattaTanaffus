@@ -368,3 +368,44 @@
     }
   }
 }
+
+//========================================================================================================================================================
+.readmore {
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 80, 35);
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("column-gap", 30, 15, 0, 1230, 991);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: toRem(20);
+    }
+  }
+
+  &__image-ibg {
+    overflow: hidden;
+    border-radius: toRem(20);
+    flex: 0 0 percent(660, 1200);
+    padding-bottom: percent(525, 1200);
+    height: fit-content;
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    text-align: start;
+    @include adaptiveValue("margin-bottom", 30, 25);
+  }
+
+  &__showmore {
+  }
+}
