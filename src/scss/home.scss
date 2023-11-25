@@ -316,3 +316,55 @@
     }
   }
 }
+
+//========================================================================================================================================================
+
+.photo {
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 80, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__slider {
+    position: relative;
+
+    @media (min-width: $tablet) {
+      border-radius: toRem(30);
+      border: toRem(1) solid #812d9f;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__slide-ibg {
+    border-radius: toRem(30);
+    overflow: hidden;
+    padding-bottom: percent(600, 1200);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+  }
+
+  &__navigation {
+    @media (min-width: $tablet) {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      justify-content: space-between;
+      @include adaptiveValue("padding-right", 30, 15, 0, 1230, 991);
+      @include adaptiveValue("padding-left", 30, 15, 0, 1230, 991);
+    }
+    @media (max-width: $tablet) {
+      justify-content: flex-end;
+      margin-top: toRem(20);
+    }
+  }
+}

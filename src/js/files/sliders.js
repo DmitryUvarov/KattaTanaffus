@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay,
@@ -28,8 +28,8 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.1234342')) {
-			new Swiper('.12324234', {
+	if (document.querySelector('.sd1234342')) {
+			new Swiper('.sd12324234', {
 			modules: [Navigation],
 			observer: true,
 			observeParents: true,
@@ -102,6 +102,29 @@ function initSliders() {
 			on: {
 
 			}
+		});
+	}
+	if (document.querySelector('.photo__slider')) {
+		new Swiper('.photo__slider', {
+			modules: [Navigation, EffectFade, Autoplay],
+			observer: true,
+			observeParents: true,
+			speed: 300,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			lazyPreloaderClass: 'preloader',
+			loop: true,
+			effect: 'fade',
+
+			navigation: {
+				prevEl: ".photo__slider .button-prev",
+				nextEl: ".photo__slider .button-next",
+			  },
+
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 		});
 	}
 }
