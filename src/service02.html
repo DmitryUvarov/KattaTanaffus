@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="hero">
+                <div class="hero__container">
+                    <div class="hero__body">
+                        <div class="hero__content">
+                            <h1 class="hero__title title title_white">Занятия для дошкольников от 7 до 17 лет </h1>
+                            <div class="hero__text title-2 title-2_white">Индивидуальные уроки <br> и занятия с группой </div>
+                            <div class="hero__buttons">
+                                <button class="hero__button button">Хочу на пробный урок!</button>
+                                <a href="tel:+998 71 200 74 74" class="hero__link _icon-phone"><span>Позвонить</span></a>
+                            </div>
+                        </div>
+                        <div class="hero__image-ibg"><img src="@img/hero/03.jpg" alt=""></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="classes">
+                <div class="classes__container">
+                    <h2 class="classes__title title">Занятия</h2>
+                    <div class="classes__items">
+                        <article class="classes__item item-classes">
+                            <a href="#" class="item-classes__image-ibg"><img src="@img/activities/06.jpg" alt=""></a>
+                            <div class="item-classes__content">
+                                <div class="item-classes__title title-2 title-2_white"><a href="#">Почемучка от 3 до 5 лет</a></div>
+                                <a href="#" class="item-classes__link button">Хочу на пробный!</a>
+                            </div>
+                        </article>
+                        <article class="classes__item item-classes">
+                            <a href="#" class="item-classes__image-ibg"><img src="@img/activities/07.jpg" alt=""></a>
+                            <div class="item-classes__content">
+                                <div class="item-classes__title title-2 title-2_white"><a href="#">Подготовка к школе от 6 до 7 лет</a></div>
+                                <a href="#" class="item-classes__link button">Хочу на пробный!</a>
+                            </div>
+                        </article>
+                        <article class="classes__item item-classes">
+                            <a href="#" class="item-classes__image-ibg"><img src="@img/activities/07.jpg" alt=""></a>
+                            <div class="item-classes__content">
+                                <div class="item-classes__title title-2 title-2_white"><a href="#">Ментальная арифметика</a></div>
+                                <a href="#" class="item-classes__link button">Хочу на пробный!</a>
+                            </div>
+                        </article>
+                        <div class="classes__item banner-classes">
+                            <div class="banner-classes__title title-2">Не смогли определиться?</div>
+                            <div class="banner-classes__title title-2 title-2_white">Пройдите наш онлайн-квиз и мы поможем вам!</div>
+                            <a href="#" class="banner-classes__button button">Пройти квиз</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            @@include('html/_banner.htm',{})
+
+            @@include('html/_contact.htm',{})
+
+            @@include('html/_readmore.htm',{})
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

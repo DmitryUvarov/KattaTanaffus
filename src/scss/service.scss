@@ -1,0 +1,116 @@
+.classes {
+  @include adaptiveValue("padding-top", 120, 35);
+  @include adaptiveValue("padding-bottom", 80, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 80, 30, 0, 1230, 991);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(400), 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-classes {
+  position: relative;
+  padding-bottom: toRem(100);
+  &__image-ibg {
+    overflow: hidden;
+    border-radius: toRem(30);
+    display: block;
+    padding-bottom: percent(352, 560);
+  }
+
+  a.item-classes__image-ibg {
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    min-height: toRem(191);
+    border-radius: toRem(30);
+    background-color: #812d9f;
+    padding: toRem(15) toRem(30) toRem(20);
+
+    display: flex;
+    flex-direction: column;
+    gap: toRem(15);
+
+    @media (max-width: $pc) {
+      padding: toRem(15);
+    }
+    @media (max-width: $mobile) {
+      min-height: toRem(150);
+    }
+  }
+
+  &__title {
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fce302;
+      }
+    }
+  }
+
+  &__link {
+    width: fit-content;
+    margin-top: auto;
+    height: toRem(45);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.banner-classes {
+  border-radius: toRem(30);
+  background: #35c968;
+  display: flex;
+  flex-direction: column;
+
+  gap: toRem(15);
+  padding: toRem(105) toRem(55) toRem(120);
+
+  @media (max-width: $mobile) {
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    padding-top: toRem(40);
+    padding-bottom: toRem(40);
+    text-align: center;
+    align-items: center;
+  }
+  &__title {
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 45, 20);
+    height: toRem(45);
+    width: fit-content;
+  }
+}
