@@ -30,6 +30,10 @@ function pageLoad() {
             }
             if (!targetElement.closest('.menu__item.open')) {
                 menuItem.classList.add('open')
+                if (!targetElement.closest('._spoller-init')) {
+                    e.preventDefault();
+                    console.log('1');
+                }
             }
             // if (targetElement.closest('.menu__item')) {
             //     menuItem.classList.remove('open')
