@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Карточка блога</title>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <!-- <style>body{opacity: 0;}</style> -->
+    <style>
+        @font-face {
+            font-family: "Inter Tight";
+            font-display: swap;
+            src: url("../fonts/InterTight-Medium.woff2") format("woff2"), url("../fonts/InterTight-Medium.woff") format("woff");
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "Inter Tight";
+            font-display: swap;
+            src: url("../fonts/InterTight-Regular.woff2") format("woff2"), url("../fonts/InterTight-Regular.woff") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+
+            <section class="blog-article">
+                <div class="blog-article__container">
+
+                    <div class="blog-article__image-ibg"><img src="@img/blog/01.jpg" alt=""></div>
+                    <div class="blog-article__body">
+                        <div class="blog-article__date">15.12.2022</div>
+                        <h1>Детство и подростковый возраст</h1>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                        <p>Это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="blog">
+                <div class="blog__container">
+                    <div class="blog__items">
+                        <article class="blog__item item-blog">
+                            <div class="item-blog__date">15.12.2022</div>
+                            <div class="item-blog__title"><a href="#">Детство и подростковый возраст</a></div>
+                            <div class="item-blog__text">
+                                <p>это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                            </div>
+                            <a href="#" class="item-blog__link">читать дальше</a>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <div class="item-blog__date">15.12.2022</div>
+                            <div class="item-blog__title"><a href="#">Детство и подростковый возраст</a></div>
+                            <div class="item-blog__text">
+                                <p>это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                            </div>
+                            <a href="#" class="item-blog__link">читать дальше</a>
+                        </article>
+                        <article class="blog__item item-blog">
+                            <div class="item-blog__date">15.12.2022</div>
+                            <div class="item-blog__title"><a href="#">Детство и подростковый возраст</a></div>
+                            <div class="item-blog__text">
+                                <p>это подготовка к взрослой жизни и труду. Важно правильно направлять энергию и силы деток, чтобы развить их лучшие способности и качества</p>
+                            </div>
+                            <a href="#" class="item-blog__link">читать дальше</a>
+                        </article>
+                    </div>
+                    <button class="blog__button button-primary">Читать другие статьи</button>
+                </div>
+            </section>
+
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

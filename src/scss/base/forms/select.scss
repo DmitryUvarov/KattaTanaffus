@@ -3,6 +3,11 @@
 .select {
   min-width: 0;
   position: relative;
+
+  font-family: "Cera Round Pro";
+  @include adaptiveValue("font-size", 24, 18);
+  font-weight: 400;
+  line-height: 130%; /* 31.2px */
   // .select__body
   &__body {
     position: relative;
@@ -11,33 +16,36 @@
   &__title {
     color: inherit;
     text-align: left;
-    border: 1px solid #d9d9d9;
-    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
     cursor: pointer;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 0;
+    color: #fff;
   }
   // .select__value
   &__value {
     display: flex;
     min-width: 0;
     align-items: center;
-    height: toRem(30);
-    padding: 0 toRem(15);
+    min-height: toRem(50);
     gap: toRem(10);
     > * {
       flex: 1 1 auto;
     }
     &:after {
-      content: "";
+      content: "\e900";
+      @extend %ic;
       align-self: stretch;
-      flex: 0 0 10px;
+      flex: 0 0 toRem(15);
       transition: all 0.3s ease 0s;
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #fce302;
+      font-size: toRem(7);
       ._select-open & {
-        transform: rotate(-180deg);
+        transform: rotate(180deg);
       }
     }
     &._select-pseudo-label {
@@ -85,7 +93,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     // Максимальна висота
-    max-height: toRem(200);
+    max-height: toRem(350);
     // Стилі скроллбару
     .simplebar-scrollbar {
       &::before {
@@ -148,17 +156,35 @@
 
 // Тег
 ._select-tag {
+  @include adaptiveValue("font-size", 18, 14);
+  display: inline-flex;
+  align-items: center;
+  column-gap: toRem(10);
   cursor: pointer;
+
+  border: toRem(1) solid #fff;
+  padding: toRem(5) toRem(10);
+  border-radius: toRem(5);
+
+  @media (max-width: $mobile) {
+    padding: toRem(5);
+  }
+
+  &:not(:last-child) {
+    margin-right: toRem(5);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        color: red;
+      }
+    }
+  }
+
+  &::after {
+    content: "\e903";
+    @extend %ic;
+    font-size: toRem(10);
+  }
 }
-
-// <select name="form[]" class="form" multiple data-tags=".test">
-// <option value="Любой" data-asset="Первая група"></option>
-// <option value="1" selected>Пункт №1</option>
-// <option value="2">Пункт №2</option>
-
-// <option value="Любой 2" data-asset="Вторая група"></option>
-// <option value="3">Пункт №3</option>
-// <option value="4">Пункт №4</option>
-// </select>
-
-// <div class="test"></div>

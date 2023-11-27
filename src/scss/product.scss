@@ -1,0 +1,124 @@
+.product {
+  @include adaptiveValue("padding-top", 70, 35);
+  @include adaptiveValue("padding-bottom", 50, 35);
+  &__container {
+  }
+
+  &__image-ibg {
+    flex: 0 0 percent(670, 1200);
+    border-radius: toRem(20);
+    overflow: hidden;
+    padding-bottom: percent(525, 1200);
+    height: fit-content;
+
+    @media (max-width: $pc) {
+      flex: 0 0 45%;
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("column-gap", 30, 15, 0, 1230, 991);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: toRem(25);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    text-align: start;
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__text {
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__button {
+    margin-top: auto;
+
+    padding-left: toRem(25);
+    padding-right: toRem(25);
+    @media (min-width: $mobile) {
+      width: fit-content;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.going {
+  @include adaptiveValue("padding-top", 70, 35);
+  @include adaptiveValue("padding-bottom", 50, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__items {
+    @include adaptiveValue("gap", 30, 20, 0, 1230, 991);
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: em(640)) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-going {
+  border-radius: toRem(40);
+
+  @include adaptiveValue("padding-top", 25, 20);
+  @include adaptiveValue("padding-bottom", 55, 25);
+  @include adaptiveValue("padding-left", 30, 15);
+  @include adaptiveValue("padding-right", 30, 15);
+
+  &:nth-child(4n + 1) {
+    background-color: #30d2ff;
+  }
+  &:nth-child(4n + 2) {
+    background-color: #35c968;
+  }
+  &:nth-child(4n + 3) {
+    background-color: #e92bed;
+  }
+  &:nth-child(4n + 4) {
+    background-color: #812d9f;
+  }
+
+  flex: 1 1 percent(410, 1200);
+
+  &_big {
+    flex: 1 0 percent(760, 1200);
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("margin-bottom", 20, 15);
+  }
+
+  &__text {
+    font-size: toRem(18);
+    font-weight: 500;
+    color: #fff;
+
+    &_dark {
+      color: #812d9f;
+    }
+  }
+}

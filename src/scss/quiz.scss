@@ -1,0 +1,189 @@
+.quiz {
+  background-color: #812d9f;
+  &__container {
+    max-width: toRem(1370);
+  }
+
+  &__body {
+    padding: toRem(50) 0 toRem(40);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-family: "Cera Round Pro";
+    @include adaptiveValue("font-size", 50, 35);
+    font-weight: 700;
+    line-height: 118%; /* 118% */
+
+    @include adaptiveValue("margin-bottom", 30, 20);
+  }
+
+  &__maintitle {
+    text-align: center;
+    color: #fff;
+    font-family: "Cera Round Pro";
+    @include adaptiveValue("font-size", 60, 30);
+    font-weight: 700;
+    line-height: 110%; /* 98.333% */
+    text-transform: uppercase;
+  }
+
+  &__text {
+    text-align: center;
+    color: #fff;
+    font-family: "Cera Round Pro";
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: 110%; /* 108.333% */
+  }
+
+  &__wrapper {
+    @include adaptiveValue("margin-top", 50, 30);
+    border-radius: toRem(30);
+    border: 1px solid #812d9f;
+    background: #fff;
+    @include adaptiveValue("padding-top", 30, 20);
+    @include adaptiveValue("padding-bottom", 25, 20);
+    @include adaptiveValue("padding-left", 45, 15, 0, 1230, 767);
+    @include adaptiveValue("padding-right", 45, 15, 0, 1230, 767);
+    max-width: toRem(760);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__form {
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(15);
+    margin-top: toRem(15);
+    transition: all 0.3s ease 0s;
+
+    &._hide {
+      display: none;
+    }
+  }
+
+  &__control-text {
+    @include adaptiveValue("font-size", 20, 16);
+    color: red;
+    opacity: 0;
+
+    ._error & {
+      opacity: 1;
+    }
+  }
+
+  &__button {
+    border-radius: toRem(14);
+    border: toRem(1) solid #812d9f;
+    background: #fce302;
+    height: toRem(45);
+
+    color: #812d9f;
+    font-family: "Cera Round Pro";
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 500;
+    line-height: 103%; /* 103.333% */
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: toRem(10);
+    padding: 0 toRem(25);
+    transition: all 0.3s ease 0s;
+    &::before {
+      font-size: toRem(10);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #812d9f;
+        color: #fff;
+      }
+    }
+  }
+}
+.form-quiz {
+  &__step {
+    display: none;
+    &._active {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: toRem(30);
+  }
+
+  &__checkboxes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: toRem(8);
+    column-gap: toRem(15);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, auto);
+    }
+    @media (max-width: em(550)) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__line {
+    margin-bottom: toRem(17);
+  }
+
+  &__label {
+    display: block;
+    color: #2d2a2a;
+    font-family: "Cera Round Pro";
+    @include adaptiveValue("font-size", 24, 18);
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+
+    margin-bottom: toRem(4);
+  }
+  &__input {
+    width: 100%;
+    color: #812d9f;
+    font-family: "Cera Round Pro";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+
+    border-radius: toRem(14);
+    border: toRem(1) solid #2d2a2a;
+    background: #fff;
+
+    height: toRem(44);
+    padding: 0 toRem(20);
+
+    &::placeholder {
+      color: #812d9f;
+      opacity: 0.5;
+    }
+    &:focus {
+      outline: none;
+      border-color: #000;
+    }
+  }
+
+  &__button {
+    border-radius: 14px;
+    margin-top: toRem(15);
+    height: toRem(44);
+    width: 100%;
+
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+  }
+}

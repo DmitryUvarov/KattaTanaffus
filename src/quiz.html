@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Квиз"
+})
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+
+            <section class="quiz">
+                <div class="quiz__container">
+                    <div class="quiz__body">
+                        <h5 class="quiz__title">Пройдите наш онлайн-квиз <br> и мы поможем подобрать занятие для вашего ребенка</h5>
+                        <div class="quiz__text">Ответьте на несколько простых вопросов <br>и наш менеджер свяжется с вами в ближайшее время!</div>
+                        <div class="quiz__wrapper">
+                            <form action="#" class="quiz__form form-quiz" data-quiz>
+                                <div class="form-quiz__step _active" data-step>
+                                    <div class="form-quiz__title">Сколько лет вашему ребенку?</div>
+                                    <div class="form-quiz__checkboxes">
+                                        <div class="checkbox">
+                                            <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="c_1" class="checkbox__label">до 7 лет</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="c_2" class="checkbox__label">от 7 до 14 лет</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="c_3" class="checkbox__label">Старше 14 лет</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-quiz__step" data-step>
+                                    <div class="form-quiz__title">Какой филиал вам удобен для посещения?</div>
+                                    <div class="form-quiz__checkboxes">
+                                        <div class="checkbox">
+                                            <input id="f_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="f_1" class="checkbox__label">Учтепа</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="f_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="f_2" class="checkbox__label">Юнусабад</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="f_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="f_3" class="checkbox__label">Новза</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-quiz__step" data-step>
+                                    <div class="form-quiz__title">Какие направления интересны для вашего ребенка?</div>
+                                    <div class="form-quiz__checkboxes">
+                                        <div class="checkbox">
+                                            <input id="g_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_1" class="checkbox__label">Спорт</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_2" class="checkbox__label">Языки</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_3" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_3" class="checkbox__label">Подготовка к школе</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_4" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_4" class="checkbox__label">Математика</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_5" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_5" class="checkbox__label">Шахматы</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_6" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_6" class="checkbox__label">Робототехника</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_7" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_7" class="checkbox__label">ИЗО</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_8" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_8" class="checkbox__label">Танцы</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <input id="g_9" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="groop1">
+                                            <label for="g_9" class="checkbox__label">Логопед</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-quiz__step" data-step>
+                                    <div class="form-quiz__line">
+                                        <label for="inpc1" class="form-quiz__label">Ваше имя</label>
+                                        <input id="inpc1" autocomplete="off" type="text" name="form[]" placeholder="Имя " class="form-quiz__input">
+                                    </div>
+                                    <div class="form-quiz__line">
+                                        <label for="inpc2" class="form-quiz__label">Укажите ваш номер</label>
+                                        <input id="inpc2" autocomplete="off" type="text" name="form[]" placeholder="(999) 999-99-99" class="form-quiz__input">
+                                    </div>
+                                    <button type="submit" class="form-quiz__button button">Отправить результаты квиза</button>
+                                </div>
+                            </form>
+                            <div class="quiz__control">
+                                <div class="quiz__control-text">Выберите минимум 1 пункт</div>
+                                <button data-quiz-next type="button" class="quiz__button _icon-arrow-right">Далее</butt>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+        </main>
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

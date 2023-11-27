@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Карточка курса"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+
+            <section class="product">
+                <div class="product__container">
+                    <div class="product__body">
+                        <div class="product__image-ibg"><img src="@img/product/01.jpg" alt=""></div>
+                        <div class="product__content">
+                            <h2 class="product__title title">Ментальная арифметика</h2>
+                            <div class="product__text text">
+                                <p>Ментальная арифметика - популярная в мире эффективная система, с помощью которой миллионы детей научились считать в уме быстрее калькулятора и развили свои интеллектуальные способности</p>
+                            </div>
+                            <button class="product__button button">Записаться на занятие</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="going">
+                <div class="going__container">
+                    <h2 class="going__title title">Как проходят занятия?</h2>
+                    <div class="going__items">
+                        <div class="going__item item-going item-going_big">
+                            <div class="item-going__title title-2">Индивидуальный подход к каждому ребенку</div>
+                            <div class="item-going__text item-going__text_dark text">
+                                <p>Для нас важно, чтобы все активно участвовали в уроке
+                                    и понимали преподавателя. Поэтому мы уделяем внимание ученикам, учитывая особенности каждого</p>
+                            </div>
+                        </div>
+                        <div class="going__item item-going">
+                            <div class="item-going__title title-2">Авторская программа обучения</div>
+                            <div class="item-going__text item-going__text_dark text">
+                                <p>Наша цель – заинтересовать каждого ребёнка, направить его энергию на развитие и обучение. Детям любого возраста понравятся занятия в нашем учебном центре</p>
+                            </div>
+                        </div>
+                        <div class="going__item item-going">
+                            <div class="item-going__title title-2">Мы открыты к общению с родителями</div>
+                            <div class="item-going__text text">
+                                <p>В онлайн-чате, можно поддерживать контакт с учителем, задавать вопросы и высказывать свои пожелания</p>
+                            </div>
+                        </div>
+                        <div class="going__item item-going item-going_big">
+                            <div class="item-going__title title-2">Средний стаж преподавателей - 17 лет</div>
+                            <div class="item-going__text text">
+                                <p>В нашем центре преподают учителя и тренеры, среди мастера спорта международного класса и судьи международных соревнований, 3 преподавателя с наградой "Отличник народного образования", а также авторы учебных пособий и книг.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            @@include('html/_banner.htm',{})
+
+            @@include('html/_contact.htm',{})
+
+            @@include('html/_readmore.htm',{})
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,10 +1,41 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
+			<div class="popup__title title-2 title-2_white">Оставьте свои данные и наш <br> менеджер свяжется <br> с вами в ближайшее время!</div>
+
+			<form action="#" class="popup__form form-contact">
+				<div class="form-contact__line">
+					<input autocomplete="off" type="text" name="form[]" placeholder="Ваш телефон*" class="form-contact__input input">
+				</div>
+
+				<div class="form-contact__line">
+
+					<select name="form[]" class="form" multiple data-tags>
+						<option value="" selected>Интересующее занятие</option>
+						<option value="Любой" data-asset="Первая група"></option>
+						<option value="1">Пункт №1</option>
+						<option value="2">Пункт №2</option>
+
+						<option value="Любой 2" data-asset="Вторая група"></option>
+						<option value="3">Пункт №3</option>
+						<option value="4">Пункт №4</option>
+					</select>
+				</div>
+
+				<button class="form-contact__button button">Заказать обратный звонок</button>
+
+			</form>
+			<button data-close class="popup__close"></button>
+		</div>
+	</div>
+</div>
+<div id="thank" aria-hidden="true" class="popup popup_thank">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close class="popup__close"></button>
+
+			<div class="popup__maintitle title title_white">Спасибо за заявку! </div>
+			<div class="popup__title title-2 title-2_white">Наш менеджер свяжется с вами в ближайшее время!</div>
 		</div>
 	</div>
 </div>
