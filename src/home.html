@@ -84,10 +84,14 @@
 				</div>
 			</section>
 
+			<div data-showmore class="block">
+				<div data-showmore-content class="block__content"></div>
+				<button hidden data-showmore-button type="button" class="block__more"><span>Показать еще</span><span>Скыть</span></button>
+			</div>
 			<section class="activities">
-				<div class="activities__container">
+				<div class="activities__container" data-showmore="items" data-showmore-media="767,max">
 					<h2 class="activities__title title">Большой выбор занятий для каждого</h2>
-					<div class="activities__items">
+					<div class="activities__items" data-showmore-content="4">
 						<div class="activities__item item-activities">
 							<div class="item-activities__image-ibg"><img src="@img/activities/05.jpg" alt=""></div>
 						</div>
@@ -131,9 +135,13 @@
 								<a href="#" class="item-activities__link button">Хочу на пробный!</a>
 							</div>
 						</article>
-						<div class="activities__item item-activities">
-							<div class="item-activities__image-ibg"><img src="@img/activities/05.jpg" alt=""></div>
-						</div>
+						<article class="activities__item item-activities">
+							<a href="#" class="item-activities__image-ibg"><img src="@img/activities/03.jpg" alt=""></a>
+							<div class="item-activities__content">
+								<h3 class="item-activities__title title-2 title-2_white"><a href="#">Подготовка к школе от 6 до 7 лет</a></h3>
+								<a href="#" class="item-activities__link button">Хочу на пробный!</a>
+							</div>
+						</article>
 						<article class="activities__item item-activities">
 							<a href="#" class="item-activities__image-ibg"><img src="@img/activities/04.jpg" alt=""></a>
 							<div class="item-activities__content">
@@ -142,6 +150,7 @@
 							</div>
 						</article>
 					</div>
+					<button hidden data-showmore-button type="button" class="activities__more button"><span>Загрузить еще</span><span>Скрыть</span></button>
 				</div>
 			</section>
 

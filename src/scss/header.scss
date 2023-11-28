@@ -57,6 +57,9 @@
   }
 
   &__menu {
+    @media (min-width: $pc) {
+      flex: 1 1 auto;
+    }
     @media (max-width: $pc) and (min-width: $mobile) {
       flex: 1 1 100%;
       order: 10;
@@ -128,7 +131,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    row-gap: toRem(10);
+    row-gap: toRem(5);
     @include adaptiveValue("column-gap", 22, 15, 0, 1230, 991);
 
     @media (max-width: $pc) {

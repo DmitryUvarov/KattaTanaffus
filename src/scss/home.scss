@@ -222,15 +222,28 @@
     display: grid;
     gap: toRem(30);
     grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
+  }
+
+  &__more {
+    width: 100%;
+    margin-top: toRem(20);
+    @media (min-width: $mobile) {
+      display: none;
+    }
   }
 }
 
 .image-activities {
 }
 .item-activities {
+  height: max-content;
   position: relative;
   overflow: hidden;
   border-radius: toRem(15);
