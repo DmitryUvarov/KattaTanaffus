@@ -142,7 +142,13 @@
     right: toRem(-77);
     z-index: 2;
 
-    @include adaptiveValue("right", -77, 15, 0, 1400, 1230);
+    @media (min-width: $mobile) {
+      @include adaptiveValue("right", -77, 15, 0, 1400, 1230);
+    }
+
+    @media (max-width: $mobile) {
+      left: toRem(-15);
+    }
   }
 }
 
