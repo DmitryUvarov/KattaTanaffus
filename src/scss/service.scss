@@ -51,10 +51,10 @@
     left: 0;
     width: 100%;
 
-    min-height: toRem(191);
+    min-height: toRem(144);
     border-radius: toRem(30);
     background-color: #812d9f;
-    padding: toRem(15) toRem(30) toRem(20);
+    padding: toRem(10) toRem(20);
 
     display: flex;
     flex-direction: column;
@@ -64,11 +64,13 @@
       padding: toRem(15);
     }
     @media (max-width: $mobile) {
-      min-height: toRem(150);
+      // min-height: toRem(150);
     }
   }
 
   &__title {
+    @include adaptiveValue("font-size", 24, 22);
+
     transition: all 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
