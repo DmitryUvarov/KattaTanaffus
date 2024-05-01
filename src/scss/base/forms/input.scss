@@ -35,14 +35,14 @@ textarea {
     outline: none;
   }
 }
-.input[placeholder]:not([data-placeholder-nohiden]) {
-  &::placeholder {
-    transition: opacity 0.3s;
-  }
-  &:focus::placeholder {
-    opacity: 0;
-  }
-}
+// .input[placeholder]:not([data-placeholder-nohiden]) {
+//   &::placeholder {
+//     transition: opacity 0.3s;
+//   }
+//   &:focus::placeholder {
+//     opacity: 0;
+//   }
+// }
 
 textarea.input {
   resize: none;
